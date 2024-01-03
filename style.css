@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    background: linear-gradient(to right, #333, rgba(51, 231, 45, 0.774));
+    animation: gradientAnimation 0.1ms infinite ,colorfulBars 1s linear infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+   @keyframes colorfulBars {
+    0% {
+      background-color: #3FFC3F;
+      background-position: 0% 50%;
+    }
+    100% {
+      background-color: #3FFC3F;
+      background-position: 100% 50%;
+    }
+  }
+
+  
+  
+  .container {
+    width: 300px;
+    padding: 20px;
+    background-color: rgb(50, 50, 50);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+  }
+  
+  .input-container {
+    margin: 10px 0;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(60, 179, 113);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(46, 139, 87);
+  }
+  
+  @keyframes colorfulBars {
+    0% {
+      background-color: #FF5733;
+    }
+    10% {
+      background-color: #FF5733;
+    }
+    20% {
+      background-color: #FFD133;
+    }
+    30% {
+      background-color: #94FF33;
+    }
+    40% {
+      background-color: #33FF4E;
+    }
+    50% {
+      background-color: #33FFC7;
+    }
+    60% {
+      background-color: #33DFFF;
+    }
+    70% {
+      background-color: #337EFF;
+    }
+    80% {
+      background-color: #8A33FF;
+    }
+    90% {
+      background-color: #FF33F5;
+    }
+    100% {
+      background-color: #FF5733;
+    }
+  }
+  
+  html::before, html::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    animation: colorfulBars 15s infinite;
+    z-index: -1;
+  }
+  
+  html::after {
+    top: auto;
+    bottom: 0;
+  }
